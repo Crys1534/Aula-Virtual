@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Educativo Pixel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartClass</title>
+<link rel="stylesheet" href="style.css">
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="app.js"></script>
 </head>
+
 <body>
-    <div class="game-container">
-        <header>
-            <h1 class="pixel-title">MI AULA VIRTUAL</h1>
-        </header>
 
-        <div id="role-selection" class="card">
-            <p>¿QUIÉN ERES?</p>
-            <button class="btn-pixel" onclick="showLogin('docente')">SOY DOCENTE</button>
-            <button class="btn-pixel btn-blue" onclick="showLogin('estudiante')">SOY ESTUDIANTE</button>
-        </div>
+<div class="container">
 
-        <div id="login-docente" class="card hidden">
-            <h2 id="docente-action-title">INICIAR SESIÓN</h2>
-            <input type="text" id="doc-user" placeholder="USUARIO/EMAIL" class="input-pixel">
-            <input type="password" id="doc-pass" placeholder="CONTRASEÑA" class="input-pixel">
-            <button class="btn-pixel" onclick="authDocente()">ENTRAR</button>
-            <p class="toggle-auth" onclick="toggleDocenteAuth()">¿No tienes cuenta? Crear una</p>
-            <button class="btn-pixel btn-red" onclick="resetView()">VOLVER</button>
-        </div>
+<div class="card">
 
-        <div id="login-estudiante" class="card hidden">
-            <h2>INGRESA TU PIN</h2>
-            <p>5 DÍGITOS</p>
-            <input type="text" id="student-pin" maxlength="5" placeholder="00000" class="input-pixel pin-input">
-            <button class="btn-pixel btn-blue" onclick="loginEstudiante()">ENTRAR AL JUEGO</button>
-            <button class="btn-pixel btn-red" onclick="resetView()">VOLVER</button>
-        </div>
-    </div>
+<h1>SmartClass</h1>
+<p>Tu aula virtual moderna</p>
 
-	<script type="module" src="scripts/login.js"></script>
+<input type="email" id="email" placeholder="Correo">
+<input type="password" id="password" placeholder="Contraseña">
+
+<button onclick="register()">Registrarse</button>
+<button onclick="login()">Iniciar Sesión</button>
+
+<p id="msg"></p>
+
+</div>
+
+</div>
+
 </body>
 </html>

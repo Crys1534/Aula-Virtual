@@ -1,89 +1,75 @@
-body {
-    background-color: #333;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-.game-container {
-    text-align: center;
-    background: #4a4a4a;
-    padding: 30px;
-    border: 8px solid #000;
-    image-rendering: pixelated;
-    box-shadow: 10px 10px 0px #222;
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#667eea,#764ba2);
 }
 
-.pixel-title {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #ffcc00;
-    text-shadow: 4px 4px 0px #8a6d00;
+.container{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+width:350px;
+text-align:center;
+color:white;
 }
 
-.hidden { display: none; }
-
-.btn-pixel {
-    background-color: #72b01d; /* Verde pasto */
-    color: white;
-    padding: 15px;
-    border: 4px solid #000;
-    box-shadow: inset -4px -4px 0px #3f6310, inset 4px 4px 0px #a4e644;
-    cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.8rem;
+.card h1{
+font-size:35px;
+margin-bottom:10px;
 }
 
-.btn-pixel:active { box-shadow: inset 4px 4px 0px #3f6310; }
-.btn-blue { background-color: #2b59c3; box-shadow: inset -4px -4px 0px #1a3a8a, inset 4px 4px 0px #638efc; }
-.btn-red { background-color: #c32b2b; font-size: 0.6rem; margin-top: 10px; }
-
-.input-pixel {
-    background: #eee;
-    border: 4px solid #000;
-    padding: 10px;
-    font-family: 'Press Start 2P', cursive;
-    outline: none;
-    text-align: center;
+.card p{
+margin-bottom:25px;
+opacity:.9;
 }
 
-.pin-input { font-size: 1.5rem; letter-spacing: 5px; color: #2b59c3; }
-
-.toggle-auth { font-size: 0.5rem; cursor: pointer; text-decoration: underline; margin: 10px 0; }
-
-
-.panel-wide { width: 80%; max-width: 800px; }
-.row { display: flex; gap: 10px; justify-content: center; }
-.small { width: 80px; }
-
-.pixel-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background: #555;
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:16px;
 }
 
-.pixel-table th, .pixel-table td {
-    border: 4px solid #000;
-    padding: 10px;
-    text-align: left;
+button{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:none;
+border-radius:10px;
+background:white;
+color:#764ba2;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
 }
 
-.pixel-table th { background: #333; color: #ffcc00; font-size: 0.7rem; }
-.pin-code { color: #00ff00; font-weight: bold; font-size: 1.2rem; }
+button:hover{
+transform:scale(1.03);
+}
 
-.add-student-box {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+#msg{
+margin-top:15px;
+font-size:14px;
 }

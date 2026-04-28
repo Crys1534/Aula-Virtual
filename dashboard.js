@@ -58,9 +58,6 @@ querySnapshot.forEach((doc)=>{
 
 area.innerHTML += `
 <div class="card" onclick="goClass('${doc.id}')">
-window.goClass = function(id){
-window.location = "clase.html?id=" + id;
-}
 <h3>${doc.data().name}</h3>
 <p>Clase activa</p>
 </div>
@@ -80,3 +77,7 @@ window.location="index.html";
 }
 
 });
+
+window.goClass = function(id){
+window.location.href = "clase.html?id=" + id;
+}

@@ -45,7 +45,21 @@
 
 <section id="trabajo" class="tab">
 
-<h2>Sin tareas aún</h2>
+<div class="taskbox">
+
+<h2>Crear tarea</h2>
+
+<input type="text" id="taskTitle" placeholder="Título">
+
+<textarea id="taskDesc" placeholder="Descripción"></textarea>
+
+<input type="date" id="taskDate">
+
+<button onclick="createTask()">Publicar tarea</button>
+
+</div>
+
+<div id="tasks"></div>
 
 </section>
 

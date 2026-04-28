@@ -77,3 +77,48 @@ ${doc.data().text}
 
 loadClass();
 loadPosts();
+
+window.createTask = async function(){
+
+let title = document.getElementById("taskTitle").value;
+let desc = document.getElementById("taskDesc").value;
+let date = document.getElementById("taskDate").value;
+
+if(title=="") return;
+
+await addDoc(collection(db,"classes",id,"tasks"),{
+title:title,
+desc:desc,
+date:date
+});
+
+document.getElementById("taskTitle").value="";
+document.getElementById("taskDesc").value="";
+document.getElementById("taskDate").value="";
+
+loadTasks();
+
+}
+
+async function loadTasks(){
+
+let area = document.getElementById("tasks");
+area.innerHTML="";
+
+const querySnapshot = await getDocs(collection(db,"classes",id,"tasks"));
+
+querySnapshot.forEach((doc)=>{
+
+area.innerHTML += `
+<div class="task">
+<h3>${doc.data().title}</h3>
+<p>${doc.data().desc}</p>
+<small>Entrega: ${doc.data().date}</small>
+</div>
+`;
+
+});
+
+}
+
+loadTasks();

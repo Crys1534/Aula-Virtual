@@ -57,7 +57,10 @@ const querySnapshot = await getDocs(collection(db,"classes"));
 querySnapshot.forEach((doc)=>{
 
 area.innerHTML += `
-<div class="card">
+<div class="card" onclick="goClass('${doc.id}')">
+window.goClass = function(id){
+window.location = "clase.html?id=" + id;
+}
 <h3>${doc.data().name}</h3>
 <p>Clase activa</p>
 </div>

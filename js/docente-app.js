@@ -1,5 +1,5 @@
 import { db } from './firebase-config.js';
-import { collection, addDoc, serverTimestamp } from "[https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js](https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js)";
+import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 const formTarea = document.getElementById('form-nueva-tarea');
 const codigoActual = "QNT-501"; // El código de tu aula
